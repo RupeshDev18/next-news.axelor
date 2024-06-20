@@ -12,14 +12,15 @@ import CarouselNewsSlide from "../components/CarouselNews";
 import FeaturedNews from "../components/FeatureNews";
 import NewsList from "../components/NewsList";
 import NewsBox from "../components/NewsBox";
+import Image from "next/image";
 
 const NewsPage = () => {
   return (
     <>
-      <div className="w-screen h-full flex flex-col gap-10 bg-gray-200  px-10 py-5">
+      <div className="w-full h-full flex flex-col gap-10 bg-gray-200  px-10 py-5">
         {/* News Section Starts */}
-        <div className="flex flex-row gap-5 w-full">
-          <div className="relative w-1/2 h-[500px] rounded-2xl shadow-2xl">
+        <div className="flex flex-row gap-5 w-full h-[400px]">
+          <div className="relative w-1/2 h-full rounded-2xl shadow-2xl">
             <div className="absolute top-0 left-0 p-4 rounded-2xl">
               <button className="bg-violet-300 text-violet-900 p-2 rounded-lg mr-2">
                 Category
@@ -28,10 +29,12 @@ const NewsPage = () => {
                 Category
               </button>
             </div>
-            <img
+            <Image
               className="w-full h-full rounded-2xl object-cover"
+              width={100}
+              height={100}
               src="https://media.istockphoto.com/id/496719837/photo/motivation-fuels-the-human-engine.jpg?s=612x612&w=0&k=20&c=kz5YL7dYzmQpbRTbEafeFshJ3nSslVoJ5Hypf0uxYzI="
-              alt=""
+              alt="image"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent rounded-md"></div>
             <div className="absolute bottom-0 left-0 p-4 flex flex-col gap-2">
@@ -45,7 +48,7 @@ const NewsPage = () => {
               <p className="text-sm text-white font-bold">8 hours ago</p>
             </div>
           </div>
-          <div className="w-1/2 flex flex-row gap-6 h-[500px]">
+          <div className="w-1/2 flex flex-row gap-6 h-full">
             <NewsBox
               image="https://images.pexels.com/photos/414837/pexels-photo-414837.jpeg"
               category={[1, 2]}
@@ -61,8 +64,8 @@ const NewsPage = () => {
         {/* Carousel Section Starts */}
         <CarouselNewsSlide />
         {/* FeaturedNews Section Starts */}
-        <div className="flex flex-row gap-10  w-full">
-          <div className="w-1/3 p-5 ml-10 bg-white rounded-2xl">
+        <div className="flex flex-row gap-5  w-full">
+          <div className="w-2/5 p-5  bg-white rounded-2xl">
             <p className="text-black font-bold text-2xl font-sans">
               Featured News
             </p>

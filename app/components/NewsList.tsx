@@ -9,10 +9,10 @@ const NewsList = ({
 }) => {
   return (
     <>
-      <div className="flex flex-row">
+      <div className="flex gap-2">
         <div className="w-1/3">
           {/* <div className="rounded-xl w-56 h-56"> */}
-          <img className="w-68 h-56 rounded-l-xl ml-20" src={image} alt="" />
+          <img className="w-68 h-56 rounded-l-xl " src={image} alt="" />
           {/* </div> */}
         </div>
         <div className="w-2/3">

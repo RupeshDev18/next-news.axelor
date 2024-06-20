@@ -18,7 +18,7 @@ const FeaturedNews = ({
 
   return (
     <>
-      <div className="flex flex-row w-full">
+      <div className="flex flex-row w-full gap-2">
         <div className="w-1/3 rounded-2xl">
           <img src={image} className="w-40 h-32 rounded-2xl" alt="" />
         </div>
@@ -43,10 +43,12 @@ const FeaturedNews = ({
               <p className="font-bold text-2xl text-black font-sans">{title}</p>
               <p className="text-sm font-bold text-gray-500">{text}</p>
             </div>
-            <div className="rounded-xl bg-green-200 p-2 w-10 h-10 cursor-pointer border ">
-              <p className="text-green-800 text-center">&rarr;</p>
-            </div>
           </div>
+        </div>
+        <div className="w-[50px] flex items-center">
+          <p className="text-green-600 bg-green-200 text-center w-[32px] h-[32px] rounded flex items-center justify-center">
+            &rarr;
+          </p>
         </div>
       </div>
       <hr />

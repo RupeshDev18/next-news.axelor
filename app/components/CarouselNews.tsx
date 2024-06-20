@@ -66,10 +66,8 @@ const CarouselNewsSlide: React.FC<DemoSliderProps> = ({ data }) => {
   return (
     <div>
       <Swiper
-        spaceBetween={40}
-        navigation
-        slidesPerView={6}
-        pagination={{ type: "bullets", clickable: true }}
+        spaceBetween={24}
+        slidesPerView={5}
         autoplay={true}
         loop={true}
         modules={[Autoplay, Navigation, Pagination]}
@@ -78,12 +76,14 @@ const CarouselNewsSlide: React.FC<DemoSliderProps> = ({ data }) => {
           <SwiperSlide key={item.id}>
             <div className="relative rounded-md">
               <img
-                className="w-56 h-56 rounded-2xl shadow-2xl "
+                className="w-[120px] h-[120px] md:h-44 md:w-44  lg:h-56 lg:w-56 rounded-2xl shadow-2xl  object-cover"
                 src={item.img}
                 alt=""
               />
-              <div className="absolute top-40 left-20 flex justify-center items-center ">
-                <p className="text-white font-bold text-xl">{item.title}</p>
+              <div className="absolute bottom-2 left-0  w-full flex justify-center items-center ">
+                <p className="text-white font-bold   text-center text-xl">
+                  {item.title}
+                </p>
               </div>
             </div>
           </SwiperSlide>
